@@ -26,7 +26,7 @@ app.get("/api/:date?", (req, res) => {
 
   let dateStr = req.params.date
   if (isInt(dateStr)) {
-    dateStr = Number(dateStr * 1000)
+    dateStr = Number(dateStr)
   }
   const parsedDate = new Date(dateStr)
   // Validate date
