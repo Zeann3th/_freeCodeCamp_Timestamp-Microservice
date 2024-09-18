@@ -31,8 +31,8 @@ app.get("/api/:date?", (req, res) => {
   const parsedDate = new Date(dateStr)
   // Validate date
   if (isNaN(parsedDate.getTime())) {
-    return res.status(400).json({
-      "err": "Invalid Date"
+    return res.json({
+      "error": "Invalid Date"
     })
   }
   // Response
